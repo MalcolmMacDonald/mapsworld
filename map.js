@@ -1,5 +1,5 @@
 function initialize() {
-    var fenway = { lat: 43.6537984, lng: -79.4003736 };
+    var fenway = { lat: 39.8341082, lng: -104.6762833 };
     var direction = { heading: 46.2, pitch: 151.69 };
     var panorama = new google.maps.StreetViewPanorama(
         document.getElementById('pano'), {
