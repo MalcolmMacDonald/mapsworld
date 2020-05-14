@@ -7,5 +7,4 @@ function initialize() {
         clickToGo: false,
         linksControl: false
     });
-    map.setStreetView(panorama);
 }
