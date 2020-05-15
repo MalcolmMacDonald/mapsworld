@@ -32,7 +32,7 @@ function createURL(location) {
     var latString = getScrambledPosition(location.lat);
     var lngString = getScrambledPosition(location.lng);
 
-    return latString + ',' + lngString;
+    return latString + '&' + lngString;
 }
 
 

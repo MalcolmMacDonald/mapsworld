@@ -31,7 +31,7 @@ function createURL(location) {
 }
 
 function unscrambleURL(scrambledURL) {
-    var splitURL = scrambledURL.split(',');
+    var splitURL = scrambledURL.split('&');
     var scrambledLat = splitURL[0];
     var scrambledLng = splitURL[1];
 
