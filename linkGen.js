@@ -53,7 +53,12 @@ function getScrambledPosition(position) {
 }
 
 function scrambleString(input) {
-
+    if (input[0] == '+') {
+        input = '7' + input.slice(1);
+    }
+    else {
+        input = '3' + input.slice(1);
+    }
     input = input.split('.')[0] + input.split('.')[1];
     var output = "";
     for (var i = 0; i < 11; i++) {
