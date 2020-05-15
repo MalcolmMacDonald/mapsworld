@@ -28,20 +28,13 @@ html {
     align-items: flex-start;
     width: 100%;
     padding: 1%;
-    color: green;
 }
 #output{
     display: flex;
     width: 100%;
     padding: 1%;
-    flex-direction: row;
-
-
     justify-items: flex-start;
     align-items: flex-start;
     background-color: rgb(191, 250, 164);
+}
 
-}
-.outputText{
-    width: 100%;
-}
