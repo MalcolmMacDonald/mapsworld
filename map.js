@@ -1,20 +1,22 @@
 var scrambledOrder = [9, 10, 6, 0, 7, 2, 5, 4, 3, 1, 8];
 var unscrambleOrder = [3, 9, 5, 8, 7, 6, 2, 4, 10, 0, 1];
-
+//82471338900,33632076418
 function initialize() {
-    var location = { lat: 39.8341082, lng: -104.6762833 };
 
-    var newURL = createURL(location);
-    console.log(newURL);
+    var paramsString = window.location.href.split("?l=")[1];
+
+    var location = {};// lat: 39.8341082, lng: -104.6762833 };
 
 
-    var unscrambledLocation = unscrambleURL(newURL);
+    if (paramsString != "") {
+        location = unscrambleURL(paramsString);
+    }
+    console.log(location);
 
-    console.log(unscrambledLocation);
 
     var panorama = new google.maps.StreetViewPanorama(
         document.getElementById('pano'), {
-        position: unscrambledLocation,
+        position: location,
         disableDefaultUI: true,
         clickToGo: false,
         linksControl: false
