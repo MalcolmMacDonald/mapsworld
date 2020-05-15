@@ -39,21 +39,15 @@ function createURL(location) {
 function getScrambledPosition(position) {
 
     var positionString = position.toString();
-
-    if (positionString.length < 12) {
-
-        if (positionString.length == 10) {
-            positionString = "+0" + positionString;
-        }
-        else {
-            if (position < 0) {
-                positionString = "-0" + positionString.slice(1);
-            }
-            else {
-                positionString = "+" + positionString;
-            }
-        }
+    var positionSign = position > 0 ? '+' : '-';
+    var stringWithoutSign = positionString;
+    if (positionString[0] = '-') {
+        stringWithoutSign = stringWithoutSign.slice(1);
     }
+    stringWithoutSign = stringWithoutSign.padStart(11, '0');
+    positionString = positionSign + stringWithoutSign;
+    console.log(positionString);
+
     var scrambledPosition = scrambleString(positionString);
     return scrambledPosition;
 }
