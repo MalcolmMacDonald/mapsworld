@@ -1,1 +1,31 @@
-<h1>test</h1>
+<script src="linkGen.js"></script>
+
+<div id="center-container">
+    <div id="maker">
+        <h1>
+            Enter your spot's location.
+        </h1>
+        <div id="input-form">
+            <form name="locationForm" action="javascript:presentLink()">
+                <label for="location">Google street view URL: </label>
+                <input type="text" id="location" name="location" size="90">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div id="output">
+            <b>
+                Spot link: <a id="outputLink" class="outputText"></a>
+            </b>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="stylesheets/spotmaker.css" />
