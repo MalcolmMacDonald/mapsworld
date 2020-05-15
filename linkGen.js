@@ -41,7 +41,7 @@ function getScrambledPosition(position) {
     var positionString = position.toString();
     var positionSign = position > 0 ? '+' : '-';
     var stringWithoutSign = positionString;
-    if (positionString[0] = '-') {
+    if (positionString[0] == '-') {
         stringWithoutSign = stringWithoutSign.slice(1);
     }
     stringWithoutSign = stringWithoutSign.padStart(11, '0');
